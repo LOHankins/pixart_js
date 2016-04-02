@@ -12,6 +12,7 @@ function handleClickButton() {
 	$(".brush").css("background-color", chosenColor);
 	event.preventDefault();
 	$("#color-field").val("");
+	createSquares();
 }
 
 function handlePressEnter() {
@@ -21,9 +22,18 @@ function handlePressEnter() {
 	$(".brush").css("background-color", chosenColor);
 	event.preventDefault();
 	$("#color-field").val("");
+	createSquares();
 }
 
-
+function createSquares() {
+	console.log("createSquares");
+	var square = null; 	
+	for (i = 0; i < 20; i += 1) {
+		$("body").append($("<div></div>").addClass("square"));
+	}
+	event.preventDefault();
+	
+}
 
 
 
