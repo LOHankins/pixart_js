@@ -14,11 +14,19 @@ function handleClickButton() {
 	$("#color-field").val("");
 }
 
+function handlePressEnter() {
+	console.log("handlePressEnter");
+	var chosenColor = $("#color-field").val();
+	var brushBox = $(".brush");
+	$(".brush").css("background-color", chosenColor);
+	event.preventDefault();
+	$("#color-field").val("");
+}
 
 
 
 
 
-
+$("#form").submit(handlePressEnter);
 $("#set-color").click(handleClickButton);
 });
