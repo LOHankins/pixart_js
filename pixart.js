@@ -29,10 +29,18 @@ function createSquares() {
 	console.log("createSquares");
 	var square = null; 	
 	for (i = 0; i < 20; i += 1) {
-		$("body").append($("<div></div>").addClass("square"));
+		$("body").append($("<div></div>").addClass("square").click(handleClickSquares));
+
 	}
 	event.preventDefault();
 	
+}
+
+function handleClickSquares() {
+	console.log("handleClickSquares");
+	$(this).css("background-color", "green");
+	event.preventDefault();
+
 }
 
 
