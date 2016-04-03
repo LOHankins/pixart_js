@@ -29,8 +29,8 @@ function handlePressEnter() {
 function createSquares() {
 	console.log("createSquares");
 	var square = null; 	
-	for (i = 0; i < 20; i += 1) {
-		$("body").append($("<div></div>").addClass("square").click(handleClickSquares));
+	for (i = 0; i < 8000; i += 1) {
+		$("body").append($("<div></div>").addClass("square").mouseover(handleClickSquares));
 
 	}
 	event.preventDefault();
