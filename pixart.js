@@ -3,11 +3,12 @@ $(document).on("ready", function() {
 
 
 var setColorButton = $("#set-color");
+var chosenColor = "";
  
 
 function handleClickButton() {
 	console.log("handleClickButton");
-	var chosenColor = $("#color-field").val();
+	chosenColor = $("#color-field").val();
 	var brushBox = $(".brush");
 	$(".brush").css("background-color", chosenColor);
 	event.preventDefault();
@@ -17,7 +18,7 @@ function handleClickButton() {
 
 function handlePressEnter() {
 	console.log("handlePressEnter");
-	var chosenColor = $("#color-field").val();
+	chosenColor = $("#color-field").val();
 	var brushBox = $(".brush");
 	$(".brush").css("background-color", chosenColor);
 	event.preventDefault();
@@ -38,7 +39,7 @@ function createSquares() {
 
 function handleClickSquares() {
 	console.log("handleClickSquares");
-	$(this).css("background-color", "green");
+	$(this).css("background-color", chosenColor);
 	event.preventDefault();
 
 }
